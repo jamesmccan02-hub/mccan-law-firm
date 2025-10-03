@@ -48,13 +48,20 @@
             <div class="contact-grid">
                 <div class="contact-form">
                     <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary-color);">Send Us a Message</h2>
-                    <form action="https://formsubmit.co/isramailing@gmail.com" method="POST">
-  <input type="hidden" name="_next" value="https://jamesmccan02-hub.github.io/mccan-law-firm/thank-you.html">
-  <input type="text" name="name" required placeholder="Your Name" />
-  <input type="email" name="email" required placeholder="Your Email" />
-  <textarea name="message" required placeholder="Your Message"></textarea>
-  <button type="submit">Send</button>
-</form>
+                    <form id='leadForm' action="https://formsubmit.co/isramailing@gmail.com" method="POST">
+                        <input type="hidden" name="_next" value="https://jamesmccan02-hub.github.io/mccan-law-firm/thank-you.html">
+                        <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="Your Name" required></div>
+                        <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="Your Email" required></div>
+                        <div class="form-group"><label for="message">Message *</label><textarea id="message" name="message" placeholder="Your Message" required></textarea></div>
+                        <button type="submit" class="submit-btn">Send</button>
+                    </form>
+                    <script>
+                    document.getElementById('leadForm').addEventListener('submit', function() {
+                      if (window.dataLayer) {
+                        window.dataLayer.push({ event: 'lead_submit' });
+                      }
+                    });
+                    </script>
                 </div>
                 <div>
                     <div class="contact-info">
@@ -129,7 +136,7 @@
                     <p><i class="fas fa-envelope"></i> info@mccanlawfirm.com</p>
                 </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2025 McCan Law Firm. All rights reserved.</p></div>
+            <div class="footer-bottom"><p>© 2025 McCan Law Firm. All rights reserved.</p></div>
         </div>
     </footer>
     <script src="script.js"></script>
