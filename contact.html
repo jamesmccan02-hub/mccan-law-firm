@@ -1,149 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Free Consultation | McCan Law Firm</title>
-  <meta name="description" content="Contact McCan Law Firm for a free consultation on cryptocurrency asset recovery. Expert legal help for crypto scam cases.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-  <!-- End Google Tag Manager -->
-</head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- Header / Navigation -->
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">⚖️ McCan Law Firm</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | McCan Law Firm</title>
+    <meta name="description" content="Contact McCan Law Firm for a free consultation on cryptocurrency asset recovery. Expert legal help for crypto scam cases." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root{ --bg:#0b0f14; --panel:#0f1620; --muted:#8ea3b7; --text:#e8f1fb; --brand:#4FC3F7; --brand-2:#2dd4bf; --card:#111a25; --border:rgba(255,255,255,.08); }
+      *{box-sizing:border-box}
+      html,body{margin:0;padding:0}
+      body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0a0e13;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+      a{color:var(--brand);text-decoration:none}
+      .container{max-width:1100px;margin:0 auto;padding:0 20px}
+      /* Header */
+      .header{position:sticky;top:0;background:rgba(10,14,19,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border);z-index:20}
+      .navbar{padding:14px 0}
+      .nav-container{display:flex;align-items:center;justify-content:space-between}
+      .nav-logo{font-weight:700;letter-spacing:.2px;display:flex;gap:10px;align-items:center;color:var(--text)}
+      .nav-menu{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+      .nav-link{color:var(--muted)}
+      .nav-link.active,.nav-link:hover{color:var(--text)}
+      .cta-button{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;padding:8px 14px;border-radius:10px;font-weight:600}
+      /* Page header */
+      .page-header{background:radial-gradient(1200px 400px at 50% -50%,rgba(79,195,247,.25),transparent), radial-gradient(800px 300px at 80% -40%,rgba(45,212,191,.2),transparent); border-bottom:1px solid var(--border)}
+      .page-header .container{padding:56px 20px 40px;text-align:center}
+      .eyebrow{color:var(--brand-2);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem}
+      .title{margin:10px 0 8px;font-size:clamp(28px,4.2vw,40px);line-height:1.15;font-weight:700}
+      .subtitle{color:var(--muted);max-width:760px;margin:0 auto}
+      /* Sections */
+      .section{padding:56px 0}
+      .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+      .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px}
+      .card h3{margin:0 0 8px}
+      /* Form */
+      .consult-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      .consult-form input,.consult-form select,.consult-form textarea{background:#0b1119;border:1px solid var(--border);color:var(--text);padding:12px 12px;border-radius:12px}
+      .consult-form textarea{grid-column:1 / -1;min-height:140px}
+      .consult-form button{justify-self:start;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;border:0;padding:12px 16px;border-radius:12px;font-weight:700}
+      /* Info cards */
+      .info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+      .info-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center}
+      .info-card .icon{font-size:34px;color:#8fe7ff;margin-bottom:10px}
+      .muted{color:#cbd6e3}
+      /* CTA */
+      .cta{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(180deg,#0d1520,#0b1119);border:1px solid var(--border);border-radius:18px;padding:22px}
+      .btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 16px;border-radius:12px}
+      /* Footer */
+      .footer{border-top:1px solid var(--border);background:#0a0f15;padding:32px 0 40px;margin-top:20px}
+      .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;margin-bottom:18px}
+      .footer-bottom{color:#99aabb;border-top:1px solid var(--border);padding-top:14px;text-align:center}
+      @media (max-width: 900px){ .grid{grid-template-columns:1fr} .info-grid{grid-template-columns:1fr} .consult-form{grid-template-columns:1fr} }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="container nav-container">
+          <a class="nav-logo" href="index.html"><i class="fas fa-shield-alt"></i> McCan Law Firm</a>
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="services.html">Services</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link active" href="contact.html">Contact</a></li>
+            <li><a class="nav-link cta-button" href="contact.html">Free Consultation</a></li>
+          </ul>
+        </div>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- Page Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Get Your Free Consultation</h1>
-      <p>Contact us today - we're here to help recover your crypto assets</p>
-    </div>
-  </section>
-
-  <!-- Contact Form Section -->
-  <section class="section">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 50px;">Send Us a Message</h2>
-      <form class="consult-form" action="https://formsubmit.co/jamesmccan02@gmail.com" method="POST" id="leadForm">
-        <input type="hidden" name="_next" value="https://jamesmccan02-hub.github.io/mccan-law-firm/thank-you.html">
-        <input type="hidden" name="_subject" value="New Contact Form Submission">
-        <input type="text" name="name" placeholder="Your Full Name" required>
-        <input type="email" name="email" placeholder="Your Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <select name="case-type" required>
-          <option value="">Select Case Type</option>
-          <option value="crypto-scam">Cryptocurrency Scam</option>
-          <option value="exchange-fraud">Exchange Fraud</option>
-          <option value="wallet-hack">Wallet Hack</option>
-          <option value="investment-fraud">Investment Fraud</option>
-          <option value="other">Other</option>
-        </select>
-        <textarea name="message" rows="6" placeholder="Describe your situation and how much was lost..." required></textarea>
-        <button type="submit">Request Free Consultation</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Contact Info Section -->
-  <section class="section section-gray">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 50px;">Get In Touch</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-        <div style="background: white; padding: 30px; border-radius: 8px; text-align: center;">
-          <div style="font-size: 40px; color: #f1c40f; margin-bottom: 15px;">📞</div>
-          <h3 style="margin-bottom: 10px;">Phone</h3>
-          <p><a href="tel:+447587110246" style="color: #0d1b2a;">+44 7587 110246</a></p>
-          <p style="font-size: 14px; color: #666;">Available 24/7 for urgent cases</p>
-        </div>
-        
-        <div style="background: white; padding: 30px; border-radius: 8px; text-align: center;">
-          <div style="font-size: 40px; color: #f1c40f; margin-bottom: 15px;">📧</div>
-          <h3 style="margin-bottom: 10px;">Email</h3>
-          <p><a href="mailto:jamesmccan02@gmail.com" style="color: #0d1b2a;">jamesmccan02@gmail.com</a></p>
-          <p style="font-size: 14px; color: #666;">We respond within 24 hours</p>
-        </div>
-        
-        <div style="background: white; padding: 30px; border-radius: 8px; text-align: center;">
-          <div style="font-size: 40px; color: #f1c40f; margin-bottom: 15px;">📍</div>
-          <h3 style="margin-bottom: 10px;">Location</h3>
-          <p style="color: #0d1b2a;">Office 12, Level 5, Marina Plaza<br>Dubai Marina, Dubai, UAE</p>
-          <p style="font-size: 14px; color: #666;">By appointment only</p>
-        </div>
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="eyebrow">Contact</div>
+        <h1 class="title">Get Your Free Consultation</h1>
+        <p class="subtitle">Contact us today — we're here to help recover your crypto assets.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>About McCan Law Firm</h3>
-          <p>Expert legal services for cryptocurrency asset recovery and blockchain-related legal matters. Licensed to practice in the United Arab Emirates.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="services.html">Asset Investigation</a></li>
-            <li><a href="services.html">Legal Recovery</a></li>
-            <li><a href="services.html">Settlement Negotiation</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Legal</h3>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Office 12, Level 5, Marina Plaza<br>Dubai Marina, Dubai, UAE</p>
-          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/447587110246">+44 7587 110246</a></p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:jamesmccan02@gmail.com">jamesmccan02@gmail.com</a></p>
-        </div>
+    <!-- Main grid: form + details -->
+    <section class="section">
+      <div class="container grid">
+        <article class="card">
+          <h3>Send Us a Message</h3>
+          <form id="leadForm" class="consult-form" action="https://formsubmit.co/jamesmccan02@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://jamesmccan02-hub.github.io/mccan-law-firm/thank-you.html" />
+            <input type="hidden" name="_subject" value="New Contact Form Submission" />
+            <input type="text" name="name" placeholder="Your Full Name" required />
+            <input type="email" name="email" placeholder="Your Email Address" required />
+            <input type="tel" name="phone" placeholder="Phone Number" required />
+            <select name="case-type" required>
+              <option value="">Select Case Type</option>
+              <option value="crypto-scam">Cryptocurrency Scam</option>
+              <option value="exchange-fraud">Exchange Fraud</option>
+              <option value="wallet-hack">Wallet Hack</option>
+              <option value="investment-fraud">Investment Fraud</option>
+              <option value="other">Other</option>
+            </select>
+            <textarea name="message" rows="6" placeholder="Describe your situation and how much was lost..." required></textarea>
+            <button type="submit">Request Free Consultation</button>
+          </form>
+          <div class="cta">
+            <div>
+              <strong>Prefer to talk first?</strong>
+              <div class="muted">Call us 24/7 or message via WhatsApp for urgent cases.</div>
+            </div>
+            <div class="cta-actions">
+              <a class="btn-ghost" href="tel:+447587110246"><i class="fa-solid fa-phone"></i> +44 7587 110246</a>
+              <a class="btn-ghost" href="https://wa.me/447587110246"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+          </div>
+        </article>
+        <aside class="card">
+          <h3>Contact Details</h3>
+          <div class="info-grid" style="margin-top:8px">
+            <div class="info-card">
+              <div class="icon">📞</div>
+              <div class="muted">Phone</div>
+              <a href="tel:+447587110246">+44 7587 110246</a>
+              <div class="muted">Available 24/7</div>
+            </div>
+            <div class="info-card">
+              <div class="icon">📧</div>
+              <div class="muted">Email</div>
+              <a href="mailto:jamesmccan02@gmail.com">jamesmccan02@gmail.com</a>
+              <div class="muted">Replies within 24 hours</div>
+            </div>
+            <div class="info-card">
+              <div class="icon">📍</div>
+              <div class="muted">Location</div>
+              <div>Office 12, Level 5, Marina Plaza<br/>Dubai Marina, Dubai, UAE</div>
+              <div class="muted">By appointment only</div>
+            </div>
+          </div>
+        </aside>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 McCan Law Firm. All rights reserved.</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">Attorney Advertising. Licensed to practice in UAE. This website is for informational purposes only and does not constitute legal advice.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="script.js"></script>
-  <script>
-    document.getElementById('leadForm').addEventListener('submit', function() {
-      if (window.dataLayer) {
-        window.dataLayer.push({ event: 'lead_submit' });
-      }
-    });
-  </script>
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <h3 class="footer-logo"><i class="fas fa-shield-alt"></i> McCan Law Firm</h3>
+            <div class="muted">Expert legal services for crypto asset recovery.</div>
+          </div>
+          <div>
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#investigation">Asset Investigation</a></li>
+              <li><a href="services.html#recovery">Legal Recovery</a></li>
+              <li><a href="services.html#negotiation">Settlement Negotiation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2025 McCan Law Firm. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('leadForm')?.addEventListener('submit', function(){
+        if (window.dataLayer) { window.dataLayer.push({ event: 'lead_submit' }); }
+      });
+    </script>
+  </body>
 </html>
