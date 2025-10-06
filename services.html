@@ -1,220 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Services - Crypto Asset Recovery | McCan Law Firm</title>
-  <meta name="description" content="Expert cryptocurrency recovery services including blockchain forensics, legal recovery, and settlement negotiation.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Tag Manager -->
+  <meta name="description" content="Expert cryptocurrency recovery services including blockchain forensics, legal recovery, and settlement negotiation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root{ --bg:#0b0f14; --panel:#0f1620; --muted:#8ea3b7; --text:#e8f1fb; --brand:#4FC3F7; --brand-2:#2dd4bf; --card:#111a25; --border:rgba(255,255,255,.08); }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0a0e13;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .header{position:sticky;top:0;background:rgba(10,14,19,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border);z-index:20}
+    .navbar{padding:14px 0}
+    .nav-container{display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-weight:700;letter-spacing:.2px;display:flex;gap:10px;align-items:center;color:var(--text)}
+    .nav-menu{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .nav-link{color:var(--muted)}
+    .nav-link.active,.nav-link:hover{color:var(--text)}
+    .cta-button{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;padding:8px 14px;border-radius:10px;font-weight:600}
+    .page-header{background:radial-gradient(1200px 400px at 50% -50%,rgba(79,195,247,.25),transparent), radial-gradient(800px 300px at 80% -40%,rgba(45,212,191,.2),transparent); border-bottom:1px solid var(--border)}
+    .page-header .container{padding:64px 20px 44px;text-align:center}
+    .eyebrow{color:var(--brand-2);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem}
+    .title{margin:12px 0 10px;font-size:clamp(28px,4.8vw,44px);line-height:1.15;font-weight:700}
+    .subtitle{color:var(--muted);max-width:760px;margin:0 auto}
+    .section{padding:56px 0}
+    .section h2{margin:0 0 10px;text-align:center;font-size:26px}
+    .section .section-lead{color:var(--muted);text-align:center;max-width:760px;margin:0 auto 24px}
+    .services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .service-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:20px}
+    .service-icon{font-size:22px}
+    .cta-section{padding:56px 0}
+    .cta{background:linear-gradient(180deg,#0d1520,#0b1119);border:1px solid var(--border);border-radius:18px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .cta h3{margin:0 0 6px;font-size:22px}
+    .cta p{margin:0;color:#cbd6e3}
+    .cta .cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;border:0;padding:10px 16px;border-radius:12px;font-weight:700}
+    .btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 16px;border-radius:12px}
+    .footer{border-top:1px solid var(--border);background:#0a0f15;padding:32px 0 40px;margin-top:20px}
+    .footer-bottom{color:#99aabb;border-top:1px solid var(--border);padding-top:14px;text-align:center}
+    @media (max-width: 900px){ .services-grid{grid-template-columns:1fr 1fr} }
+    @media (max-width: 640px){ .services-grid{grid-template-columns:1fr} .page-header .container{padding:44px 20px 32px} .cta{flex-direction:column;align-items:flex-start} }
+  </style>
   <script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WXJK95GN');
   </script>
-  <!-- End Google Tag Manager -->
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  
-  <!-- Header / Navigation -->
-  <header>
-    <div class="container">
-      <a class="logo" href="index.html">⚖️ McCan Law Firm</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXJK95GN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a class="nav-logo" href="index.html"><i class="fas fa-shield-alt"></i> McCan Law Firm</a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link cta-button" href="contact.html">Free Consultation</a></li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
-
-  <!-- Video Hero Section -->
-  <section class="video-hero">
-    <div class="video-background">
-      <video autoplay muted loop playsinline>
-        <source src="https://static.videezy.com/system/resources/previews/000/039/244/original/CourtRoom_06.mp4" type="video/mp4">
-        <source src="https://static.videezy.com/system/resources/previews/000/012/493/original/Law_Firm_24.mp4" type="video/mp4">
-      </video>
-      <div class="video-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="container">
-        <h1 class="hero-title">Our Specialized Legal Services</h1>
-        <p class="hero-subtitle">Professional cryptocurrency recovery solutions with proven results</p>
-        <a href="contact.html" class="cta-button hero-cta">Start Your Recovery Today</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Professional Images Carousel -->
-  <section class="section carousel-section">
+  <section class="page-header">
     <div class="container">
-      <h2 class="section-title">Why Choose McCan Law Firm</h2>
-      <div class="carousel-container">
-        <div class="carousel" id="lawFirmCarousel">
-          <div class="carousel-item active">
-            <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Professional Law Office">
-            <div class="carousel-caption">
-              <h3>Professional Legal Expertise</h3>
-              <p>Licensed attorneys with specialized knowledge in cryptocurrency law and digital asset recovery</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Modern Legal Team">
-            <div class="carousel-caption">
-              <h3>Advanced Technology Solutions</h3>
-              <p>Cutting-edge blockchain forensics and investigation tools for maximum recovery success</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Legal Documentation">
-            <div class="carousel-caption">
-              <h3>Comprehensive Legal Strategy</h3>
-              <p>Multi-jurisdictional approach combining civil litigation, criminal referrals, and asset recovery</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
-        <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
-        <div class="carousel-dots">
-          <span class="dot active" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-      </div>
+      <div class="eyebrow">Services</div>
+      <h1 class="title">Our Specialized Legal Services</h1>
+      <p class="subtitle">Professional cryptocurrency recovery solutions with proven results.</p>
     </div>
   </section>
-
-  <!-- Services Detail Section -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Our Core Services</h2>
+      <h2>Our Core Services</h2>
+      <p class="section-lead">From on-chain investigation to litigation and negotiated outcomes.</p>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" id="investigation">
           <div class="service-icon">🔍</div>
           <h3>Blockchain Forensics & Investigation</h3>
-          <p>Our advanced blockchain forensics team utilizes cutting-edge technology to trace your stolen cryptocurrency across multiple wallets, exchanges, and blockchain networks.</p>
-          <ul style="text-align: left; margin-top: 20px;">
-            <li>✓ Transaction tracing across all major blockchains</li>
-            <li>✓ Wallet address identification and clustering</li>
-            <li>✓ Exchange identification where funds transferred</li>
-            <li>✓ Comprehensive forensic reports for legal proceedings</li>
-          </ul>
+          <p>Trace assets across wallets and exchanges, with reports suitable for legal proceedings.</p>
         </div>
-        
-        <div class="service-card">
+        <div class="service-card" id="recovery">
           <div class="service-icon">⚖️</div>
           <h3>Legal Asset Recovery</h3>
-          <p>Aggressive legal representation to recover your cryptocurrency through civil litigation, criminal complaints, and international legal cooperation.</p>
-          <ul style="text-align: left; margin-top: 20px;">
-            <li>✓ Civil litigation against identified scammers</li>
-            <li>✓ Criminal referrals to law enforcement agencies</li>
-            <li>✓ Asset freezing and seizure proceedings</li>
-            <li>✓ International cooperation for cross-border cases</li>
-          </ul>
+          <p>Pursue civil action, coordinate criminal referrals, and obtain freezing/seizure orders where applicable.</p>
         </div>
-        
-        <div class="service-card">
+        <div class="service-card" id="negotiation">
           <div class="service-icon">🤝</div>
           <h3>Settlement & Negotiation</h3>
-          <p>Strategic negotiation with cryptocurrency exchanges, wallet providers, and other parties to facilitate the return of your assets efficiently.</p>
-          <ul style="text-align: left; margin-top: 20px;">
-            <li>✓ Direct negotiation with major crypto exchanges</li>
-            <li>✓ Coordination with wallet providers for fund recovery</li>
-            <li>✓ Settlement negotiations with identified parties</li>
-            <li>✓ Alternative dispute resolution for faster recovery</li>
-          </ul>
+          <p>Engage exchanges and platforms to facilitate the return of assets via structured resolutions.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- CTA Section -->
-  <section class="section section-gray">
-    <div class="container" style="text-align: center;">
-      <h2>Ready to Start Your Recovery?</h2>
-      <p style="font-size: 18px; margin: 20px 0 30px;">Contact us today for a free consultation and case evaluation</p>
-      <a class="cta-button" href="contact.html">Get Free Consultation</a>
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h3>Need guidance on a complex case?</h3>
+          <p>Speak to our team for a quick assessment and next steps.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn-primary" href="contact.html">Schedule Free Consultation</a>
+          <a class="btn-ghost" href="about.html">Learn More About Us</a>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>About McCan Law Firm</h3>
-          <p>Expert legal services for cryptocurrency asset recovery and blockchain-related legal matters. Licensed to practice in the United Arab Emirates.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="services.html">Asset Investigation</a></li>
-            <li><a href="services.html">Legal Recovery</a></li>
-            <li><a href="services.html">Settlement Negotiation</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Legal</h3>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p><i class="fas fa-map-marker-alt"></i> Office 12, Level 5, Marina Plaza<br>Dubai Marina, Dubai, UAE</p>
-          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/447587110246">+44 7587 110246</a></p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:jamesmccan02@gmail.com">jamesmccan02@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 McCan Law Firm. All rights reserved.</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">Attorney Advertising. Licensed to practice in UAE. This website is for informational purposes only and does not constitute legal advice.</p>
-      </div>
+      <div class="footer-bottom">© 2025 McCan Law Firm. All rights reserved.</div>
     </div>
   </footer>
-
-  <script>
-    // Carousel functionality
-    let currentSlideIndex = 0;
-    const slides = document.querySelectorAll('.carousel-item');
-    const dots = document.querySelectorAll('.dot');
-    
-    function showSlide(n) {
-      slides[currentSlideIndex].classList.remove('active');
-      dots[currentSlideIndex].classList.remove('active');
-      
-      currentSlideIndex = (n + slides.length) % slides.length;
-      
-      slides[currentSlideIndex].classList.add('active');
-      dots[currentSlideIndex].classList.add('active');
-    }
-    
-    function changeSlide(direction) {
-      showSlide(currentSlideIndex + direction);
-    }
-    
-    function currentSlide(n) {
-      showSlide(n - 1);
-    }
-    
-    // Auto-advance carousel
-    setInterval(() => changeSlide(1), 6000);
-  </script>
   <script src="script.js"></script>
 </body>
 </html>
