@@ -15,28 +15,98 @@
   <meta name="twitter:title" content="About McCan Law Firm | Crypto Asset Recovery Attorneys" />
   <meta name="twitter:description" content="Meet our crypto recovery lawyers and forensics experts. Proven track record worldwide." />
   <meta name="twitter:image" content="https://jamesmccan02-hub.github.io/mccan-law-firm/og-image.jpg" />
-  <link rel="stylesheet" href="styles.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#0f1620; --muted:#8ea3b7; --text:#e8f1fb; --brand:#4FC3F7; --brand-2:#2dd4bf; --card:#111a25; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0a0e13;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    .header{position:sticky;top:0;background:rgba(10,14,19,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border);z-index:20}
+    .navbar{padding:14px 0}
+    .nav-container{display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-weight:700;letter-spacing:.2px;display:flex;gap:10px;align-items:center;color:var(--text)}
+    .nav-menu{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .nav-link{color:var(--muted)}
+    .nav-link.active,.nav-link:hover{color:var(--text)}
+    .cta-button{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;padding:8px 14px;border-radius:10px;font-weight:600}
+
+    /* Page header */
+    .page-header{background:radial-gradient(1200px 400px at 50% -50%,rgba(79,195,247,.25),transparent), radial-gradient(800px 300px at 80% -40%,rgba(45,212,191,.2),transparent); border-bottom:1px solid var(--border)}
+    .page-header .container{padding:56px 20px 40px;text-align:center}
+    .eyebrow{color:var(--brand-2);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem}
+    .title{margin:10px 0 8px;font-size:clamp(28px,4.2vw,40px);line-height:1.15;font-weight:700}
+    .subtitle{color:var(--muted);max-width:760px;margin:0 auto}
+
+    /* About layout */
+    .about-section{padding:56px 0}
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:start}
+    .about-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .about-card h2{margin:0 0 12px;font-size:24px}
+    .about-card p{color:#cbd6e3;margin:0}
+
+    /* Stats */
+    .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .stat{position:relative;display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--border);padding:18px;border-radius:14px}
+    .stat .icon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(79,195,247,.25),rgba(45,212,191,.25));color:#8fe7ff}
+    .stat .number{font-size:22px;font-weight:700}
+    .stat .label{font-size:.92rem;color:var(--muted)}
+
+    /* CTA */
+    .cta-section{padding:56px 0}
+    .cta{background:linear-gradient(180deg,#0d1520,#0b1119);border:1px solid var(--border);border-radius:18px;padding:28px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .cta h3{margin:0 0 6px;font-size:22px}
+    .cta p{margin:0;color:#cbd6e3}
+    .cta .cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;border:0;padding:10px 16px;border-radius:12px;font-weight:700}
+    .btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 16px;border-radius:12px}
+
+    /* Footer */
+    .footer{border-top:1px solid var(--border);background:#0a0f15;padding:32px 0 40px;margin-top:20px}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;margin-bottom:18px}
+    .footer h3{margin:0 0 8px}
+    .footer a{color:#cbd6e3}
+    .footer-bottom{color:#99aabb;border-top:1px solid var(--border);padding-top:14px;text-align:center}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .about-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .stats{grid-template-columns:1fr}
+      .page-header .container{padding:44px 20px 32px}
+    }
+  </style>
+
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WXJK95GN');</script>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WXJK95GN');
+  </script>
   <!-- End Google Tag Manager -->
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXX');</script>
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXX');
+  </script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXJK95GN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Existing page content starts -->
   <header class="header">
     <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo"><i class="fas fa-shield-alt"></i> McCan Law Firm</a>
+      <div class="container nav-container">
+        <a class="nav-logo" href="index.html"><i class="fas fa-shield-alt"></i> McCan Law Firm</a>
         <ul class="nav-menu">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -44,65 +114,108 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link cta-button" href="contact.html">Free Consultation</a></li>
         </ul>
-        <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
       </div>
     </nav>
   </header>
 
-  <section class="page-header"><div class="container">About McCan Law Firm<br/>Leading Experts in Cryptocurrency Asset Recovery</div></section>
-  <section class="about-section"><div class="container"><div class="about-content">
-    <div class="about-text">
-      <h2>Our Story</h2>
-      <p>Founded in 2018, McCan Law Firm grew from a boutique practice into a global leader in crypto asset recovery, combining litigation expertise with blockchain forensics.</p>
+  <section class="page-header">
+    <div class="container">
+      <div class="eyebrow">About Us</div>
+      <h1 class="title">Leading Experts in Cryptocurrency Asset Recovery</h1>
+      <p class="subtitle">Since 2018, we’ve combined litigation strategy with blockchain forensics to trace, freeze, and recover digital assets worldwide.</p>
     </div>
-    <div class="about-stats">
-      <div class="stat-box"><div class="stat-number">$50M+</div><div class="stat-label">Assets Recovered</div></div>
-      <div class="stat-box"><div class="stat-number">500+</div><div class="stat-label">Clients Served</div></div>
-      <div class="stat-box"><div class="stat-number">95%</div><div class="stat-label">Success Rate</div></div>
-      <div class="stat-box"><div class="stat-number">40+</div><div class="stat-label">Countries</div></div>
+  </section>
+
+  <section class="about-section">
+    <div class="container about-grid">
+      <article class="about-card">
+        <h2>Our Story</h2>
+        <p>Founded in 2018, McCan Law Firm grew from a boutique practice into a global leader in crypto asset recovery. Our team blends courtroom experience with cutting‑edge on‑chain analytics, working alongside investigators and exchanges to move fast and act decisively. We prioritize clear communication, transparent strategy, and results.</p>
+      </article>
+
+      <aside class="stats">
+        <div class="stat">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12c4-1.5 6 1.5 9 1.5S18 9 21 7v10H3V12Z" stroke="currentColor" stroke-width="1.5"/><path d="M7 17.5V6m5 7V4m5 9V2" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <div class="number">$50M+</div>
+            <div class="label">Assets Recovered</div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5Z" stroke="currentColor" stroke-width="1.4"/></svg>
+          </div>
+          <div>
+            <div class="number">500+</div>
+            <div class="label">Clients Served</div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="number">95%</div>
+            <div class="label">Success Rate</div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l7 4v6c0 5-3.5 7.5-7 10-3.5-2.5-7-5-7-10V6l7-4Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="1.4"/></svg>
+          </div>
+          <div>
+            <div class="number">40+</div>
+            <div class="label">Countries</div>
+          </div>
+        </div>
+      </aside>
     </div>
-  </div></div></section>
+  </section>
 
-  <section class="cta-section"><div class="container"><div class="cta-content">
-    <h2>Ready to Recover Your Assets?</h2>
-    <p>Don’t let scammers get away with your cryptocurrency. Contact us for a free consultation.</p>
-    <a class="btn-primary large" href="contact.html">Schedule Free Consultation</a>
-  </div></div></section>
-
-  <footer class="footer"><div class="container"><div class="footer-content">
-    <div class="footer-section"><h3 class="footer-logo"><i class="fas fa-shield-alt"></i> McCan Law Firm</h3>Expert legal services for crypto asset recovery.</div>
-    <div class="footer-section">Services<ul>
-      <li><a href="services.html#investigation">Asset Investigation</a></li>
-      <li><a href="services.html#recovery">Legal Recovery</a></li>
-      <li><a href="services.html#negotiation">Settlement Negotiation</a></li>
-    </ul></div>
-    <div class="footer-section">Company<ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="terms.html">Terms of Service</a></li>
-    </ul></div>
-  </div><div class="footer-bottom">© 2025 McCan Law Firm. All rights reserved.</div></div></footer>
-
-  <!-- Cookie consent banner -->
-  <div id="cookie-banner" style="position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;padding:14px;display:none;z-index:9999">
-    <div style="max-width:960px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-      <span>We use cookies for site performance, analytics, and security. By using this site, you agree to our <a href="privacy.html" style="color:#4FC3F7">Privacy Policy</a>.</span>
-      <div>
-        <button id="cookie-accept" style="background:#2ecc71;color:#fff;border:0;padding:8px 14px;border-radius:6px;cursor:pointer">Accept</button>
-        <button id="cookie-decline" style="background:#555;color:#fff;border:0;padding:8px 14px;border-radius:6px;cursor:pointer">Decline</button>
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h3>Ready to Recover Your Assets?</h3>
+          <p>Speak with our crypto recovery team today. Fast review and next steps.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn-primary" href="contact.html">Schedule Free Consultation</a>
+          <a class="btn-ghost" href="services.html">Explore Services</a>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    (function(){
-      try{
-        var pref=localStorage.getItem('cookieConsent');
-        if(!pref){document.getElementById('cookie-banner').style.display='block';}
-        document.getElementById('cookie-accept').onclick=function(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookie-banner').style.display='none';};
-        document.getElementById('cookie-decline').onclick=function(){localStorage.setItem('cookieConsent','declined');document.getElementById('cookie-banner').style.display='none';};
-      }catch(e){}
-    })();
-  </script>
-</body>
-</html>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 class="footer-logo"><i class="fas fa-shield-alt"></i> McCan Law Firm</h3>
+          <p>Expert legal services for crypto asset recovery.</p>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html#investigation">Asset Investigation</a></li>
+            <li><a href="services.html#recovery">Legal Recovery</a></li>
+            <li><a href="services.html#negotiation">Settlement Negotiation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 McCan Law Firm. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Cookie
