@@ -22,6 +22,44 @@
       .cert-badge .icon { font-size:18px; color:#8fe7ff; }
       .trust-cta { margin-top: 12px; display:flex; gap:12px; flex-wrap:wrap; }
       .trust-cta .cert-badge { opacity:.92 }
+      
+      /* Prominent Meet the Team CTA */
+      .team-cta-button {
+        display: inline-block;
+        padding: 18px 40px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
+        color: #0b1119;
+        text-decoration: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+        transition: all 0.3s ease;
+        border: 2px solid #f4d03f;
+        margin-top: 20px;
+      }
+      .team-cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(212, 175, 55, 0.6);
+        background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #f4d03f 100%);
+      }
+      .team-cta-section {
+        background: linear-gradient(135deg, #0d1520 0%, #1a2332 100%);
+        padding: 60px 20px;
+        text-align: center;
+        border-top: 3px solid #d4af37;
+        border-bottom: 3px solid #d4af37;
+      }
+      .team-cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #f4d03f;
+      }
+      .team-cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #8fe7ff;
+      }
     </style>
   </head>
   <body>
@@ -57,7 +95,8 @@
       <div class="container">
         <h1>Recovering Your Crypto Assets with Expert Legal Guidance</h1>
         <p>UK-based legal specialists in cryptocurrency fraud recovery and blockchain dispute resolution</p>
-        <a class="cta-button" href="contact.html">Get Free Consultation</a>
+        <a href="contact.html" class="cta-button">Get Free Consultation</a>
+        <a href="meet-the-team.html" class="team-cta-button">👥 Meet Our Expert Legal Team</a>
         <div class="trust-cta">
           <div class="cert-badge"><span class="icon">🛡️</span> ISO/IEC 27001</div>
           <div class="cert-badge"><span class="icon">🔐</span> GDPR</div>
@@ -98,17 +137,17 @@
           <div class="service-card">
             <div class="service-icon">🔍</div>
             <h3>Asset Investigation</h3>
-            Comprehensive blockchain forensics and tracing to locate your stolen cryptocurrency across multiple wallets and exchanges.
+            <p>Comprehensive blockchain forensics and tracing to locate your stolen cryptocurrency across multiple wallets and exchanges.</p>
           </div>
           <div class="service-card">
             <div class="service-icon">⚖️</div>
             <h3>Legal Recovery</h3>
-            Expert legal representation for civil litigation and recovery proceedings in crypto fraud cases.
+            <p>Expert legal representation for civil litigation and recovery proceedings in crypto fraud cases.</p>
           </div>
           <div class="service-card">
             <div class="service-icon">🤝</div>
             <h3>Settlement Negotiation</h3>
-            Strategic negotiation with exchanges, platforms, and fraudsters to secure the return of your assets.
+            <p>Strategic negotiation with exchanges, platforms, and fraudsters to secure the return of your assets.</p>
           </div>
         </div>
       </div>
@@ -157,29 +196,38 @@
       </div>
     </section>
 
+    <!-- Prominent Meet the Team CTA Section -->
+    <section class="team-cta-section">
+      <div class="container">
+        <h2>👥 Meet Our Expert Legal Team</h2>
+        <p>Get to know the experienced professionals dedicated to recovering your crypto assets</p>
+        <a href="meet-the-team.html" class="team-cta-button">View Our Legal Experts</a>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
             <h3>About McCan Law Firm</h3>
-            Expert legal services for cryptocurrency asset recovery and blockchain-related legal matters. Licensed to practice in the United Arab Emirates.
+            <p>Expert legal services for cryptocurrency asset recovery and blockchain-related legal matters. Licensed to practice in the United Arab Emirates.</p>
           </div>
           <div class="footer-section">
             <h3>Services</h3>
             <ul>
-              <a href="services.html">Asset Investigation</a>
-              <a href="services.html">Legal Recovery</a>
-              <a href="services.html">Settlement Negotiation</a>
+              <li><a href="services.html">Asset Investigation</a></li>
+              <li><a href="services.html">Legal Recovery</a></li>
+              <li><a href="services.html">Settlement Negotiation</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h3>Legal</h3>
             <ul>
-              <a href="privacy.html">Privacy Policy</a>
-              <a href="terms.html">Terms of Service</a>
-              <a href="about.html">About Us</a>
-              <a href="contact.html">Contact</a>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-section">
@@ -190,7 +238,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          © 2025 McCan Law Firm. All rights reserved.
+          <p>© 2025 McCan Law Firm. All rights reserved.</p>
           <p style="margin-top: 10px; font-size: 0.9em;">Attorney Advertising. Licensed to practice in UAE. This website is for informational purposes only and does not constitute legal advice. Past results do not guarantee similar outcomes.</p>
         </div>
       </div>
