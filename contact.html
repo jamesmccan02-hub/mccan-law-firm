@@ -5,55 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | McCan Law Firm</title>
     <meta name="description" content="Contact McCan Law Firm for a free consultation on cryptocurrency asset recovery. Expert legal help for crypto scam cases." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      :root{ --bg:#0b0f14; --panel:#0f1620; --muted:#8ea3b7; --text:#e8f1fb; --brand:#4FC3F7; --brand-2:#2dd4bf; --card:#111a25; --border:rgba(255,255,255,.08); }
-      *{box-sizing:border-box}
-      html,body{margin:0;padding:0}
-      body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0a0e13;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-      a{color:var(--brand);text-decoration:none}
-      .container{max-width:1100px;margin:0 auto;padding:0 20px}
-      /* Header */
-      .header{position:sticky;top:0;background:rgba(10,14,19,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border);z-index:20}
-      .navbar{padding:14px 0}
-      .nav-container{display:flex;align-items:center;justify-content:space-between}
-      .nav-logo{font-weight:700;letter-spacing:.2px;display:flex;gap:10px;align-items:center;color:var(--text)}
-      .nav-menu{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-      .nav-link{color:var(--muted)}
-      .nav-link.active,.nav-link:hover{color:var(--text)}
-      .cta-button{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;padding:8px 14px;border-radius:10px;font-weight:600}
-      /* Page header */
-      .page-header{background:radial-gradient(1200px 400px at 50% -50%,rgba(79,195,247,.25),transparent), radial-gradient(800px 300px at 80% -40%,rgba(45,212,191,.2),transparent); border-bottom:1px solid var(--border)}
-      .page-header .container{padding:56px 20px 40px;text-align:center}
-      .eyebrow{color:var(--brand-2);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem}
-      .title{margin:10px 0 8px;font-size:clamp(28px,4.2vw,40px);line-height:1.15;font-weight:700}
-      .subtitle{color:var(--muted);max-width:760px;margin:0 auto}
-      /* Sections */
-      .section{padding:56px 0}
-      .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-      .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px}
-      .card h3{margin:0 0 8px}
-      /* Form */
-      .consult-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-      .consult-form input,.consult-form select,.consult-form textarea{background:#0b1119;border:1px solid var(--border);color:var(--text);padding:12px 12px;border-radius:12px}
-      .consult-form textarea{grid-column:1 / -1;min-height:140px}
-      .consult-form button{justify-self:start;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;border:0;padding:12px 16px;border-radius:12px;font-weight:700}
-      /* Info cards */
-      .info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-      .info-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center}
-      .info-card .icon{font-size:34px;color:#8fe7ff;margin-bottom:10px}
-      .muted{color:#cbd6e3}
-      /* CTA */
-      .cta{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(180deg,#0d1520,#0b1119);border:1px solid var(--border);border-radius:18px;padding:22px}
-      .btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text);padding:10px 16px;border-radius:12px}
-      /* Footer */
-      .footer{border-top:1px solid var(--border);background:#0a0f15;padding:32px 0 40px;margin-top:20px}
-      .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;margin-bottom:18px}
-      .footer-bottom{color:#99aabb;border-top:1px solid var(--border);padding-top:14px;text-align:center}
-      @media (max-width: 900px){ .grid{grid-template-columns:1fr} .info-grid{grid-template-columns:1fr} .consult-form{grid-template-columns:1fr} }
+      /* Premium contact form enhancements (keeps existing theme variables) */
+      .contact-wrap {
+        background: linear-gradient(180deg, rgba(79,195,247,.06), rgba(45,212,191,.05));
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .form-status {
+        height: 8px;
+        background: #0b1119;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        overflow: hidden;
+        margin-bottom: 16px;
+      }
+      .form-status .bar {
+        width: 33%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      }
+      .consult-form { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+      .field { position: relative; }
+      .field .fa, .field .fas { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 14px; }
+      .field input, .field select {
+        width: 100%;
+        padding: 12px 12px 12px 36px;
+        background: #0b1119;
+        border: 1px solid var(--border);
+        color: var(--text);
+        border-radius: 12px;
+      }
+      .field-full { grid-column: 1 / -1; }
+      .field-full textarea {
+        width: 100%;
+        min-height: 140px;
+        padding: 12px 12px 12px 36px;
+        background: #0b1119;
+        border: 1px solid var(--border);
+        color: var(--text);
+        border-radius: 12px;
+        resize: vertical;
+      }
+      .field .right-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+      .consult-form button {
+        justify-self: start;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        color: #001018;
+        border: 0;
+        padding: 14px 18px;
+        border-radius: 14px;
+        font-weight: 800;
+        letter-spacing: .2px;
+        box-shadow: 0 8px 24px rgba(79,195,247,.15);
+      }
+      .subtle-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      @media (max-width: 900px){
+        .consult-form { grid-template-columns: 1fr; }
+      }
     </style>
   </head>
   <body>
@@ -63,11 +82,11 @@
         <div class="container nav-container">
           <a class="nav-logo" href="index.html"><i class="fas fa-shield-alt"></i> McCan Law Firm</a>
           <ul class="nav-menu">
-            <li><a class="nav-link" href="index.html">Home</a></li>
-            <li><a class="nav-link" href="services.html">Services</a></li>
-            <li><a class="nav-link" href="about.html">About</a></li>
-            <li><a class="nav-link active" href="contact.html">Contact</a></li>
-            <li><a class="nav-link cta-button" href="contact.html">Free Consultation</a></li>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link active" href="contact.html">Contact</a>
+            <a class="nav-link cta-button" href="contact.html">Free Consultation</a>
           </ul>
         </div>
       </nav>
@@ -85,26 +104,45 @@
     <!-- Main grid: form + details -->
     <section class="section">
       <div class="container grid">
-        <article class="card">
-          <h3>Send Us a Message</h3>
-          <form id="leadForm" class="consult-form" action="https://formsubmit.co/jamesmccan02@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="https://jamesmccan02-hub.github.io/mccan-law-firm/thank-you.html" />
-            <input type="hidden" name="_subject" value="New Contact Form Submission" />
-            <input type="text" name="name" placeholder="Your Full Name" required />
-            <input type="email" name="email" placeholder="Your Email Address" required />
-            <input type="tel" name="phone" placeholder="Phone Number" required />
-            <select name="case-type" required>
-              <option value="">Select Case Type</option>
-              <option value="crypto-scam">Cryptocurrency Scam</option>
-              <option value="exchange-fraud">Exchange Fraud</option>
-              <option value="wallet-hack">Wallet Hack</option>
-              <option value="investment-fraud">Investment Fraud</option>
-              <option value="other">Other</option>
-            </select>
-            <textarea name="message" rows="6" placeholder="Describe your situation and how much was lost..." required></textarea>
-            <button type="submit">Request Free Consultation</button>
+        <article class="card contact-wrap">
+          <div class="form-status" aria-hidden="true"><div class="bar"></div></div>
+          <h3 style="margin:0 0 12px">Send Us a Message</h3>
+          <form id="leadForm" class="consult-form" method="POST" action="https://formsubmit.co/jamesmccan02@gmail.com">
+            <input type="hidden" name="_next" value="https://jamesmccan02-hub.github.io/mccan-law-firm/thank-you.html"/>
+            <input type="hidden" name="_subject" value="New Contact Form Submission"/>
+
+            <div class="field"><i class="fa fa-user"></i>
+              <input type="text" name="name" placeholder="Your Full Name" required />
+            </div>
+            <div class="field"><i class="fa fa-envelope"></i>
+              <input type="email" name="email" placeholder="Your Email Address" required />
+            </div>
+
+            <div class="field"><i class="fa fa-phone"></i>
+              <input type="tel" name="phone" placeholder="Phone Number" required />
+            </div>
+            <div class="field">
+              <i class="fa fa-briefcase"></i>
+              <select name="case-type" required>
+                <option value="">Select Case Type</option>
+                <option value="crypto-scam">Cryptocurrency Scam</option>
+                <option value="exchange-fraud">Exchange Fraud</option>
+                <option value="wallet-hack">Wallet Hack</option>
+                <option value="investment-fraud">Investment Fraud</option>
+                <option value="other">Other</option>
+              </select>
+              <i class="fa fa-chevron-down right-icon" aria-hidden="true"></i>
+            </div>
+
+            <div class="field-full field">
+              <i class="fa fa-comment-dots"></i>
+              <textarea name="message" rows="6" placeholder="Describe your situation and how much was lost..." required></textarea>
+            </div>
+
+            <button type="submit"><i class="fa fa-paper-plane"></i> Request Free Consultation</button>
           </form>
-          <div class="cta">
+
+          <div class="cta" style="margin-top:18px">
             <div>
               <strong>Prefer to talk first?</strong>
               <div class="muted">Call us 24/7 or message via WhatsApp for urgent cases.</div>
@@ -115,8 +153,9 @@
             </div>
           </div>
         </article>
+
         <aside class="card">
-          <h3>Contact Details</h3>
+          <h3 style="margin:0 0 12px">Contact Details</h3>
           <div class="info-grid" style="margin-top:8px">
             <div class="info-card">
               <div class="icon">📞</div>
@@ -152,18 +191,18 @@
           <div>
             <h3>Services</h3>
             <ul>
-              <li><a href="services.html#investigation">Asset Investigation</a></li>
-              <li><a href="services.html#recovery">Legal Recovery</a></li>
-              <li><a href="services.html#negotiation">Settlement Negotiation</a></li>
+              <a href="services.html#investigation">Asset Investigation</a>
+              <a href="services.html#recovery">Legal Recovery</a>
+              <a href="services.html#negotiation">Settlement Negotiation</a>
             </ul>
           </div>
           <div>
             <h3>Company</h3>
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="privacy.html">Privacy Policy</a></li>
-              <li><a href="terms.html">Terms of Service</a></li>
+              <a href="about.html">About Us</a>
+              <a href="contact.html">Contact</a>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Service</a>
             </ul>
           </div>
         </div>
