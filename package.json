@@ -1,0 +1,8 @@
+{
+  "name": "mccan-law-firm",
+  "version": "1.0.0",
+  "description": "McCan Law Firm website with Resend email integration",
+  "dependencies": {
+    "resend": "^3.0.0"
+  }
+}
